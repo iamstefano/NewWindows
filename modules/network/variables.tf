@@ -3,27 +3,12 @@ variable "resource_group_name"{}
 variable "resource_group_location" {}
 
 
-variable "vnet_name" {
-    default = "saVnet"
-    description = "Nome Vnet"
-}
+variable "vnet_name" {}
 
-variable "pip_name" {
-    default = "saPublicIp01"
-    description = "Indirizzo IP pubblico"
-}
+variable "pip_name" {}
 
-variable "subnet_name" {
-  default = "saSubnet"
-  description = "Nome subnet"
-}
+variable "subnet_name" {}
 
-variable "networksecuritygroup_name" {
-  default = "saNetSecGroup"
-  description = "Nome gruppo sicurezza network"
-}
+variable "networksecuritygroup_name" {}
 
-variable "netinterface_name" {
-  default = "saNetInterface"
-  description = "Nome interfaccia network"
-}
+variable "netinterface_name" {}
