@@ -1,5 +1,5 @@
 variable "resource_group_name"{
-    default = "sa-windowsTerraform-rg"
+    default = "sa-keyvault777-rg"
     description = "Nome gruppo risorse"
 }
 
@@ -49,13 +49,16 @@ variable "vm_size" {
 }
 
 variable "vm_username" {
-  default = "stefanostefano"
+  default     = ""
   description = "Username VM"
+  type        = string
 }
 
 variable "vm_password" {
-  default = "StefanoAre140488_"
+  default     = ""
   description = "Password VM"
+  type        = string
+  sensitive   = true
 }
 
 variable "os_disk_storage_account_type" {
@@ -64,18 +67,27 @@ variable "os_disk_storage_account_type" {
 }
 
 variable "image_publisher" {
-  default = "MicrosoftWindowsServer"
+  default = "MicrosoftWindowsDesktop"
   description = "Publisher immagine"
 }
+
 variable "image_offer" {
-  default = "WindowsServer"
+  default = "Windows-10"
   description = "Tipo di immagine"
 }
+
 variable "image_sku" {
-  default = "2016-Datacenter"
+  default = "win10-21h2-avd"
   description = "Sku immagine"
 }
+
 variable "image_version" {
   default = "latest"
   description = "Versione immagine"
+}
+
+variable "keyVaultName" {
+  type        = string
+  default = "keyvault777-sa"
+  description = "Nome Key Vault"
 }
